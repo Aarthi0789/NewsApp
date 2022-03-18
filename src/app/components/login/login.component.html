@@ -1,0 +1,53 @@
+
+<div class="container">
+    
+  <div class="col-md-6 justify-content-center">
+      <h1>Login</h1>
+      <form #formName="ngForm" (ngSubmit)="onSubmit(formName.value)" class="form-control" >
+
+       <label>User Name</label>
+       <input class="form-control" type="text" name="userName" ngModel  #userName="ngModel" required [class.is-invalid]="userName.invalid && userName.touched">
+       <div *ngIf="userName.invalid && userName.touched">
+          <p>User Name is required</p>
+       </div>
+
+       <label>Email</label>
+       <input class="form-control" type="email" name="email" ngModel #email="ngModel"   pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" required [class.is-invalid]="email.touched || email.invalid" >
+       
+       <div *ngIf="email.touched || email.invalid"> 
+          <small *ngIf="email.touched">Email is required</small>
+          <small *ngIf="email.invalid">Email if Invaid</small>
+       </div>
+       <label>Password</label>
+       <input class="form-control" type="password" name="password" ngModel  #password="ngModel"  required [class.is-invalid]="password.invalid ">
+          <div  class="text-danger" *ngIf="password.invalid ">
+          Password must be min 8 chars, one special char, Upper case and lower case
+          
+          </div>
+       <button mat-button color="primary" type="submit" [disabled]="formName.invalid">Submit</button>
+      
+
+       <div class="row justify-content-center" >
+          <p style="text-align: center;">Login With</p>
+          <mat-icon><span class="material-icons-outlined">email</span></mat-icon>
+          <mat-icon><span class="material-icons-outlined">email</span></mat-icon>
+          <mat-icon><span class="material-icons-outlined">email</span></mat-icon>
+         
+       </div>
+       <div class="row justify-content-center">
+         <div class="col-md-3">
+            <a mat-button routerLink='/signup'>Free Signup</a>
+            
+         </div>
+         <div class="col-md-3">
+            <a mat-button >Forget Password</a>
+         </div>
+       </div>
+       
+       <div>
+
+       </div>
+      </form>
+  </div>
+  
+</div>

@@ -1,0 +1,53 @@
+<div class="NationalNewsPage">
+
+    <div class="row justify-content-center" *ngFor="let NHeadline of nationalHeadlines">
+        <div class="col-6 NationalImageBlock">
+            <img mat-card-image src="{{NHeadline.NImage}}" alt="National-Head-Lines">
+            <div class="row justify-content-between">
+                <div class="col-4">
+                    1 min before
+                </div>
+                <div class="col-4">
+                    viwes
+                </div>
+            </div>
+            <h1><span style="color: red;" >లైవ్యు</span> {{NHeadline.NheadLine}}</h1>
+            <p>{{NHeadline.Npara1}}</p>
+            <p>{{NHeadline.Npara2}}</p>
+
+            <div class="row">
+                <ul>
+                    <li><a routerLink="">‘దండయాత్రపై లెక్క తప్పిన పుతిన్’ యుక్రెయిన్‌పై దాడి తీవ్రతను మరింత
+                            పెంచుతారా</a></li>
+                    <li><a routerLink="">‘దండయాత్రపై లెక్క తప్పిన పుతిన్’ యుక్రెయిన్‌పై దాడి తీవ్రతను మరింత
+                            పెంచుతారా</a></li>
+                    <li><a routerLink="">‘దండయాత్రపై లెక్క తప్పిన పుతిన్’ యుక్రెయిన్‌పై దాడి తీవ్రతను మరింత
+                            పెంచుతారా</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="col-3">
+            <h1><b>ముఖ్యమైన</b></h1>
+            <ul *ngFor="let link of impLinks">
+                <li><a routerLink="">{{link.title}}</a></li>
+
+            </ul>
+            <ul *ngFor="let card of sidecards">
+                <li>
+                    <div class="card">
+                        <img src="{{card.image}}" alt="">
+                        <p>{{card.text}}</p>
+                    </div>
+                </li>
+            </ul>
+            <ul *ngFor="let link of impLinks">
+                <li><a routerLink="">{{link.title}}</a></li>
+
+            </ul>
+
+        </div>
+
+    </div>
+
+
+</div>

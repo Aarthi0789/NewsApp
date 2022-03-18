@@ -1,0 +1,23 @@
+.adminPage{
+    height: 300px;
+    width: 100%;
+    .adminBlockImg{
+        height: 300px;
+        background-color: gray;
+       
+    }
+    
+    .adminBlock{
+        padding: 10px;
+
+        .adminHeading{
+            margin-bottom: 30px;
+        }
+        .adminContent{
+            margin-bottom: 20px;
+            .mat-card{
+                height: 169px
+            }
+        }
+    }
+}

@@ -1,0 +1,70 @@
+<div class="container">
+    
+    <h1>Sign up</h1>
+    <form class="form" [formGroup]="formName" (ngSubmit)="onSubmit()">
+        <div class="row">
+            <div class="col-md-12">
+                <label>First Name</label>
+                <input type="text" formControlName="firstName" class="form-control">
+                <div *ngIf="(f['firstName'].touched || f['firstName'].dirty)">
+                    <small class="text-danger" *ngIf="f['firstName'].touched">First Name is required</small>
+                    <small class="text-danger" *ngIf="f['firstName'].dirty">First is changed</small>
+                </div>
+
+            </div>
+
+            <div class="col-md-12">
+                <label>Last Name</label>
+                <input type="text" formControlName="lastName" class="form-control">
+                <div *ngIf=" f['lastName'].untouched && f['lastName'].pristine">
+                    <small class="text-danger" *ngIf=" f['lastName'].untouched">Last Name is required</small>
+                    <small class="text-danger" *ngIf=" f['lastName'].pristine">Last Name is not changed</small>
+                </div>
+            </div>
+        </div>
+
+        <div class="col md 12">
+            <label>Email </label>
+            <input formControlName="email" class="form-control">
+            <small class="text-danger" *ngIf="f['email']['touched']">email is required</small>
+
+            <div *ngIf="f['email']['invalid'] && f['email']['pristine']">
+                <small class="text-danger" *ngIf="f['email']['pristine']">email is not changed</small>
+            </div>
+            <div *ngIf="f['email'].errors">
+                <small *ngIf="f['email']['errors']?.['pattern']">
+                    email must be valid
+                </small>
+            </div>
+        </div>
+        <div class="col md 12">
+            <label>password</label>
+            <input type="password" formControlName="password" class="form-control">
+
+        </div>
+
+
+        <div class="col md 12">
+            <label>Address</label>
+            <input type="text" formControlName="address" class="form-control">
+        </div>
+        <div class="col md-12">
+            <label>City</label>
+            <input type="city" formControlName="city" class="form-control">
+        </div>
+        <div class="col md-12">
+            <label>state</label>
+            <input type="state" formControlName="state" class="form-control">
+        </div>
+        <div class="col md-12">
+            <label>Zip</label>
+            <input type="zip" formControlName="zip" class="form-control">
+        </div>
+
+
+        <div class="col md-12">
+            <button class="btn btn-success" type="submit">Submit</button>
+        </div>
+
+    </form>
+</div>

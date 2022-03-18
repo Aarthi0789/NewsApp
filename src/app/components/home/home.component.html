@@ -1,0 +1,409 @@
+<div class="container most-viwed ">
+  <div class="row mainPage1" *ngFor="let viewed of mostViewed">
+    <div class="col-md-6">
+      <mat-card class="mainHeadlines">
+
+        <mat-card-content>
+          <img mat-card-image src="{{viewed.mainImage}}">
+        </mat-card-content>
+      </mat-card>
+
+    </div>
+    <div class="col-md-6 text-truncate">
+      <mat-card class="mainHeadlines">
+        <mat-card-title>{{viewed.mainHeadLine}}</mat-card-title>
+        <mat-card-content>
+
+          <p>{{viewed.mainHeadContent}}</p>
+        </mat-card-content>
+        <mat-card-actions>
+          <span>
+            <mat-icon><span class="material-icons-round">watch_later</span></mat-icon> 2 Days ago
+          </span>
+          <mat-icon><span class="material-icons-outlined"> person</span>
+          </mat-icon><span>Dharma Bharam</span>
+          <mat-icon><span class="material-icons-outlined">chat_bubble_outline</span>
+          </mat-icon><span>5</span>
+        </mat-card-actions>
+      </mat-card>
+
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-3" *ngFor="let subview of subviews" >
+      <mat-card class="example-card">
+
+        <img mat-card-image src="{{subview.subImage}}">
+        <mat-card-content>
+          <p>{{subview.subContent}}</p>
+        </mat-card-content>
+        <mat-card-actions>
+          <button mat-button>LIKE</button>
+          <button mat-button>SHARE</button>
+        </mat-card-actions>
+      </mat-card>
+    </div>
+
+  </div>
+  <!--End of Popular news-->
+  <div class="cateHeading" id="national">
+
+    <h1>National NEWS</h1>
+
+  </div>
+
+  <div class="row mainPage1" *ngFor="let viewed of mostViewed">
+    <div class="col-md-6">
+      <mat-card class="mainHeadlines">
+
+        <mat-card-content>
+          <img mat-card-image src="{{viewed.mainImage}}" routerLink='/categories/national-news'>
+        </mat-card-content>
+      </mat-card>
+
+    </div>
+    <div class="col-md-6">
+      <div class="row mainPage1"  >
+        <div class="col-sm-6" >
+          <mat-card class="example-card">
+
+            <img mat-card-image src="{{viewed.mainImage}}">
+            <mat-card-content>
+              <p>{{viewed.mainHeadContent}}</p>
+            </mat-card-content>
+            <mat-card-actions>
+              <button mat-button>LIKE</button>
+              <button mat-button>SHARE</button>
+            </mat-card-actions>
+          </mat-card>
+        </div>
+        <div class="col-sm-6"> 
+          <mat-card class="example-card">
+
+            <img mat-card-image src="{{viewed.mainImage}}">
+            <mat-card-content>
+              <p>{{viewed.mainHeadContent}}</p>
+            </mat-card-content>
+            <mat-card-actions>
+              <button mat-button>LIKE</button>
+              <button mat-button>SHARE</button>
+            </mat-card-actions>
+          </mat-card>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-3" *ngFor="let subview of subviews">
+      <mat-card class="example-card">
+
+        <img mat-card-image src="{{subview.subImage}}">
+        <mat-card-content>
+          <p>{{subview.subContent}}</p>
+        </mat-card-content>
+        <mat-card-actions>
+          <button mat-button>LIKE</button>
+          <button mat-button>SHARE</button>
+        </mat-card-actions>
+      </mat-card>
+    </div>
+
+  </div>
+  <!--End of National Most viwes-->
+
+  <div class="cateHeading" id="stateNews">
+
+    <h1>STATE NEWS</h1>
+
+  </div>
+
+  <div class="row mainPage1" *ngFor="let viewed of mostViewed">
+    <div class="col-md-6">
+      <mat-card class="mainHeadlines">
+
+        <mat-card-content>
+          <img mat-card-image src="{{viewed.mainImage}}">
+        </mat-card-content>
+      </mat-card>
+
+    </div>
+    <div class="col-md-6">
+      <div class="row mainPage1">
+        <div class="col-sm-6">
+          <mat-card class="mainHeadlines">
+           
+            <mat-card-content>
+
+              <p>{{viewed.mainHeadContent}}</p>
+            </mat-card-content>
+            <mat-card-actions>
+              <mat-icon><span class="material-icons-round">watch_later</span></mat-icon> <span>2 Days ago</span>
+              <mat-icon><span class="material-icons-outlined"> person</span>
+              </mat-icon><span>Dharma Bharam</span>
+              <mat-icon><span class="material-icons-outlined">chat_bubble_outline</span>
+              </mat-icon><span>5</span>
+            </mat-card-actions>
+          </mat-card>
+        </div>
+        <div class="col-sm-6">
+          <mat-card class="mainHeadlines">
+           
+            <mat-card-content>
+
+              <p>{{viewed.mainHeadContent}}</p>
+            </mat-card-content>
+            <mat-card-actions>
+              <mat-icon><span class="material-icons-round">watch_later</span></mat-icon> <span>2 Days ago</span>
+              <mat-icon><span class="material-icons-outlined"> person</span>
+              </mat-icon><span>Dharma Bharam</span>
+              <mat-icon><span class="material-icons-outlined">chat_bubble_outline</span>
+              </mat-icon><span>5</span>
+            </mat-card-actions>
+          </mat-card>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-3" *ngFor="let subview of subviews">
+      <mat-card class="example-card">
+
+        <img mat-card-image src="{{subview.subImage}}">
+        <mat-card-content>
+          <p>{{subview.subContent}}</p>
+        </mat-card-content>
+        <mat-card-actions>
+          <button mat-button>LIKE</button>
+          <button mat-button>SHARE</button>
+        </mat-card-actions>
+      </mat-card>
+    </div>
+
+  </div>
+
+  <!--End of State Most viwes-->
+
+  <div class="cateHeading" id="sports">
+
+    <h1>Sports</h1>
+
+  </div>
+
+  <div class="row mainPage1" *ngFor="let viewed of mostViewed">
+    <div class="col-md-6">
+      <mat-card class="mainHeadlines">
+
+        <mat-card-content>
+          <img mat-card-image src="{{viewed.mainImage}}">
+        </mat-card-content>
+      </mat-card>
+
+    </div>
+    <div class="col-md-6">
+      <div class="row mainPage1">
+        <div class="col-sm-6">
+          <mat-card class="mainHeadlines">
+            <mat-card-title>{{viewed.mainHeadLine}}</mat-card-title>
+            <mat-card-content>
+
+              <p>{{viewed.mainHeadContent}}</p>
+            </mat-card-content>
+            <mat-card-actions>
+              <mat-icon><span class="material-icons-round">watch_later</span></mat-icon> <span>2 Days ago</span>
+              <mat-icon><span class="material-icons-outlined"> person</span>
+              </mat-icon><span>Dharma Bharam</span>
+              <mat-icon><span class="material-icons-outlined">chat_bubble_outline</span>
+              </mat-icon><span>5</span>
+            </mat-card-actions>
+          </mat-card>
+        </div>
+        <div class="col-sm-6">
+          <mat-card class="mainHeadlines">
+            <mat-card-title>{{viewed.mainHeadLine}}</mat-card-title>
+            <mat-card-content>
+
+              <p>{{viewed.mainHeadContent}}</p>
+            </mat-card-content>
+            <mat-card-actions>
+              <mat-icon><span class="material-icons-round">watch_later</span></mat-icon> <span>2 Days ago</span>
+              <mat-icon><span class="material-icons-outlined"> person</span>
+              </mat-icon><span>Dharma Bharam</span>
+              <mat-icon><span class="material-icons-outlined">chat_bubble_outline</span>
+              </mat-icon><span>5</span>
+            </mat-card-actions>
+          </mat-card>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="row mainPage1">
+    <div class="col-md-3" *ngFor="let subview of subviews">
+      <mat-card class="example-card">
+
+        <img mat-card-image src="{{subview.subImage}}">
+        <mat-card-content>
+          <p>{{subview.subContent}}</p>
+        </mat-card-content>
+        <mat-card-actions>
+          <button mat-button>LIKE</button>
+          <button mat-button>SHARE</button>
+        </mat-card-actions>
+      </mat-card>
+    </div>
+
+  </div>
+
+  <!--End of Sports Most viwes-->
+
+  <div class="cateHeading" id="health">
+
+    <h1>Health</h1>
+
+  </div>
+
+  <div class="row mainPage1" *ngFor="let viewed of mostViewed">
+    <div class="col-md-6">
+      <mat-card class="mainHeadlines">
+
+        <mat-card-content>
+          <img mat-card-image src="{{viewed.mainImage}}">
+        </mat-card-content>
+      </mat-card>
+
+    </div>
+    <div class="col-md-6">
+      <div class="row mainPage1">
+        <div class="col-sm-6">
+          <mat-card class="mainHeadlines">
+            <mat-card-title>{{viewed.mainHeadLine}}</mat-card-title>
+            <mat-card-content>
+
+              <p>{{viewed.mainHeadContent}}</p>
+            </mat-card-content>
+            <mat-card-actions>
+              <mat-icon><span class="material-icons-round">watch_later</span></mat-icon> <span>2 Days ago</span>
+              <mat-icon><span class="material-icons-outlined"> person</span>
+              </mat-icon><span>Dharma Bharam</span>
+              <mat-icon><span class="material-icons-outlined">chat_bubble_outline</span>
+              </mat-icon><span>5</span>
+            </mat-card-actions>
+          </mat-card>
+        </div>
+        <div class="col-sm-6">
+          <mat-card class="mainHeadlines">
+            <mat-card-title>{{viewed.mainHeadLine}}</mat-card-title>
+            <mat-card-content>
+
+              <p>{{viewed.mainHeadContent}}</p>
+            </mat-card-content>
+            <mat-card-actions>
+              <mat-icon><span class="material-icons-round">watch_later</span></mat-icon> <span>2 Days ago</span>
+              <mat-icon><span class="material-icons-outlined"> person</span>
+              </mat-icon><span>Dharma Bharam</span>
+              <mat-icon><span class="material-icons-outlined">chat_bubble_outline</span>
+              </mat-icon><span>5</span>
+            </mat-card-actions>
+          </mat-card>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="row mainPage1">
+    <div class="col-md-3" *ngFor="let subview of subviews">
+      <mat-card class="example-card">
+
+        <img mat-card-image src="{{subview.subImage}}">
+        <mat-card-content>
+          <p>{{subview.subContent}}</p>
+        </mat-card-content>
+        <mat-card-actions>
+          <button mat-button>LIKE</button>
+          <button mat-button>SHARE</button>
+        </mat-card-actions>
+      </mat-card>
+    </div>
+
+  </div>
+
+
+  <!--End of Sports Most viwes-->
+  <div class="cateHeading" id="entertainment">
+    <h1>Entertainment</h1>
+
+  </div>
+
+  <div class="row mainPage1" *ngFor="let viewed of mostViewed">
+    <div class="col-md-6">
+      <mat-card class="mainHeadlines">
+
+        <mat-card-content>
+          <img mat-card-image src="{{viewed.mainImage}}">
+        </mat-card-content>
+      </mat-card>
+
+    </div>
+    <div class="col-md-6">
+      <div class="row mainPage1">
+        <div class="col-sm-6">
+          <mat-card class="mainHeadlines">
+            <mat-card-title>{{viewed.mainHeadLine}}</mat-card-title>
+            <mat-card-content>
+
+              <p>{{viewed.mainHeadContent}}</p>
+            </mat-card-content>
+            <mat-card-actions>
+              <mat-icon><span class="material-icons-round">watch_later</span></mat-icon> <span>2 Days ago</span>
+              <mat-icon><span class="material-icons-outlined"> person</span>
+              </mat-icon><span>Dharma Bharam</span>
+              <mat-icon><span class="material-icons-outlined">chat_bubble_outline</span>
+              </mat-icon><span>5</span>
+            </mat-card-actions>
+          </mat-card>
+        </div>
+        <div class="col-sm-6">
+          <mat-card class="mainHeadlines">
+            <mat-card-title>{{viewed.mainHeadLine}}</mat-card-title>
+            <mat-card-content>
+
+              <p>{{viewed.mainHeadContent}}</p>
+            </mat-card-content>
+            <mat-card-actions>
+              <mat-icon><span class="material-icons-round">watch_later</span></mat-icon> <span>2 Days ago</span>
+              <mat-icon><span class="material-icons-outlined"> person</span>
+              </mat-icon><span>Dharma Bharam</span>
+              <mat-icon><span class="material-icons-outlined">chat_bubble_outline</span>
+              </mat-icon><span>5</span>
+            </mat-card-actions>
+          </mat-card>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="row mainPage1">
+    <div class="col-md-3" *ngFor="let subview of subviews">
+      <mat-card class="example-card">
+
+        <img mat-card-image src="{{subview.subImage}}">
+        <mat-card-content>
+          <p>{{subview.subContent}}</p>
+        </mat-card-content>
+        <mat-card-actions>
+          <button mat-button>LIKE</button>
+          <button mat-button>SHARE</button>
+        </mat-card-actions>
+      </mat-card>
+    </div>
+
+  </div>
+</div>
